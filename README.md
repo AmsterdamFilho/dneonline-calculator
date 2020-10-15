@@ -1,4 +1,4 @@
-# dneonline-calculator
+# quarkus-cxf-test
 
 This repository is intended to test the client part of this quarkus extension:
 
