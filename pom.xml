@@ -81,14 +81,6 @@
                         <id>generate-sources</id>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <!-- <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/*.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-client</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-                            </wsdlOptions> -->
                             <wsdlRoot>${project.basedir}/src/main/resources/wsdl</wsdlRoot>
                             <includes>
                                 <include>*.wsdl</include>
