@@ -1,27 +1,25 @@
 package br.com.luvva;
 
-import com.dataaccess.webservicesserver.NumberConversionSoapType;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+import org.tempuri.CalculatorSoap;
 
 import javax.inject.Inject;
-import javax.validation.constraints.NotNull;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.math.BigInteger;
 
 @Path("/")
 @Tag(name = "default")
 public class NumberConversionResource {
 
-    @Inject NumberConversionSoapType service;
+    @Inject CalculatorSoap service;
 
     @POST
-    @Path("{number}")
+    @Path("{number1}/{number2}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String get(@PathParam("number") @NotNull BigInteger number) {
-        return service.numberToWords(number);
+    public int get(@PathParam("number1") int number1, @PathParam("number2") int number2) {
+        return service.add(number1, number2);
     }
 }
