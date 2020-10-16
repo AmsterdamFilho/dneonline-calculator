@@ -101,10 +101,10 @@
   <service name="NumberConversion">
     <documentation>The Number Conversion Web Service, implemented with Visual DataFlex, provides functions that convert numbers into words or dollar amounts.</documentation>
     <port name="NumberConversionSoap" binding="tns:NumberConversionSoapBinding">
-      <soap:address location="https://www.dataaccess.com/webservicesserver/NumberConversion.wso"/>
+      <soap:address location="http://www.dataaccess.com/webservicesserver/numberconversion.wso"/>
     </port>
     <port name="NumberConversionSoap12" binding="tns:NumberConversionSoapBinding12">
-      <soap12:address location="https://www.dataaccess.com/webservicesserver/NumberConversion.wso"/>
+      <soap12:address location="http://www.dataaccess.com/webservicesserver/numberconversion.wso"/>
     </port>
   </service>
 </definitions>
